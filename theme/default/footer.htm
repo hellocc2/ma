@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MA分析管理系统</title>
+<link rel="stylesheet" type="text/css" href="{-$image_url-}theme.css" />
+<link rel="stylesheet" type="text/css" href="{-$image_url-}global.css" />
+<script>
+   var StyleFile = "theme" + document.cookie.charAt(6) + ".css";
+   document.writeln('<link rel="stylesheet" type="text/css" href="css/' + StyleFile + '">');
+</script>
+<script src="{-$javascript_url-}jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="container">
+    	<div id="header">
+        	<h2>Milanoo Analytics</h2>
+    <div id="topmenu">
+            	<ul>
+                	<li><a href="http://ht.milanoo.com/milanooht/" target="_blank">后台</a></li>
+                    <li><a href="http://boss.milanoodeals.com/" target="_blank">商品库</a></li>
+                	<li class="current"><a href="#">分析</a></li>
+                    <li><a href="http://ma.milanoo.com/admin/" target="_blank">MA</a></li>
+                    <li><a href="#">OA</a></li>
+              </ul>
+          </div>
+      </div>
+        <div id="top-panel">
+            <!-- <div id="panel">
+                <ul>
+                	<li><a href="{-$url-}">全站</a></li>
+					<li><a href="{-$url-}&lang=EN" >英文站</a></li>
+                    <li><a href="{-$url-}&lang=JP">日文站</a></li>
+            		<li><a href="{-$url-}&lang=FR">法文站</a></li>
+                    <li><a href="{-$url-}&lang=DE">德文站</a></li>
+                    <li><a href="{-$url-}&lang=RU">俄文站</a></li>
+                    <li><a href="{-$url-}&lang=IT">意大利文站</a></li>
+                    <li><a href="{-$url-}&lang=PT">葡萄牙文站</a></li>
+                </ul>
+            </div> -->
+            <form name="form" action="" method="post">
+            <div id="time_lang"> 
+				 <select name="lang"><option value="">全站</option>
+				  <option value="EN">英文站</option>
+				  <option value="JP">日文站</option>
+				  <option value="FR">法文站</option>
+				  <option value="DE">德文站</option>
+				  <option value="RU">俄文站</option>
+				  <option value="IT">意大利文站</option>
+				  <option value="PT">葡萄牙文站</option>
+				  </select>
+				  <input type="text" name="starttime" value="2012-10-22" size=13> - 
+				  <input type="text" name="endtime" value="2012-11-04" size=13>
+				  <input type="submit" value="应用">
+ 				
+ 			</div></form>
+      </div>
+        <div id="wrapper">
+            <div id="content">
+                <div id="box">
+                	<h3>网页</h3>
+                	<table width="100%">
+						 <tr>
+						 <td>PV</td>
+						 <td>UV</td>
+						 <td>平均页面停留时间</td>
+						 <td>进入次数</td>
+						 <td>跳出率</td>
+						 <td>退出率</td>
+						 <td>销售额</td> 
+						 </tr>
+						  <tr>
+						 <td>{-$collect.pv-}</td>
+						 <td>{-$collect.uv-}</td>
+						 <td>{-$collect.averagetime-}</td>
+						 <td>{-$collect.pageenter-}</td>
+						 <td>{-$collect.bouncerate-}%</td>
+						 <td>{-$collect.exitrate-}%</td>
+						 <td>{-$collect.payamount-}</td>
+						 </tr>
+					</table>
+                	<form name="form1" action="" method="get">
+                		<div>类型: <select name="pagetype"><option value="">不限</option>
+						  <option value="list" {-if $search.pagetype=="list"-}selected{-/if-}>列表</option>
+						  <option value="item" {-if $search.pagetype=="item"-}selected{-/if-}>终端</option>
+						  <option value="purchase" {-if $search.pagetype=="purchase"-}selected{-/if-}>购物流程</option>
+						  <option value="promotion" {-if $search.pagetype=="promotion"-}selected{-/if-}>促销</option>
+						  </select>&nbsp;&nbsp;
+						  分类: <input type="text" name="category" value="{-$search.category-}">&nbsp;&nbsp;
+						  页面名称: <input type="text" name="pagename" value="{-$search.pagename-}">&nbsp;&nbsp;
+						  <input type="submit" value="搜索"></td>
+						 </div></form>
+                	<table width="100%">
+						<thead>
+						{-assign var=orderby value=$search.order-}
+							<tr>
+                            	<th width="100px">{-html_sequence url=$url||页面||$orderby||pagename-}</th>
+                            	<th width="40px">{-html_sequence url=$url||PV||$orderby||pv-}</th>
+                                <th width="40px">{-html_sequence url=$url||UV||$orderby||uv-}</th>
+                                <th width="50px">{-html_sequence url=$url||访问时间||$orderby||averagetime-}</th>
+                                <th width="50px">{-html_sequence url=$url||进入次数||$orderby||pageenter-}</th>
+                                <th width="40px">{-html_sequence url=$url||跳出率||$orderby||pagebounce-}</th>
+                                <th width="40px">{-html_sequence url=$url||退出率||$orderby||pageexit-}</th>
+                                <th width="40px">{-html_sequence url=$url||订单数||$orderby||payorder-}</th>
+                                <th width="40px">{-html_sequence url=$url||销售件数||$orderby||paynum-}</th>
+                                <th width="60px">{-html_sequence url=$url||销售额(USD)||$orderby||payamount-}</th>
+                            </tr>
+						</thead>
+						<tbody>
+							{-section name=list loop=$pagevisits-}
+							<tr>
+								<td>{-$pagevisits[list].pagename-}</td>
+								<td class="a-right">{-$pagevisits[list].pv-}</td>
+								<td class="a-right">{-$pagevisits[list].uv-}</td>
+								<td class="a-right">{-$pagevisits[list].averagetime-}</td>
+								<td class="a-right">{-$pagevisits[list].pageenter-}</td>
+								<td class="a-right">{-$pagevisits[list].bouncerate-}%</td>
+								<td class="a-right">{-$pagevisits[list].exitrate-}%</td>
+								<td class="a-right">{-$pagevisits[list].payorder-}</td>
+								<td class="a-right">{-$pagevisits[list].paynum-}</td>
+								<td class="a-right">{-$pagevisits[list].payamount-}{-if $pagevisits[list].payamount>0-}<a href="###" onclick="getsaleranking('{-$pagevisits[list].pagepid-}')" >+</a>{-/if-}</td>
+							</tr>
+							<tr>
+							<td colspan=10><div id="page_{-$pagevisits[list].pagepid-}" style="width:100%;display:none;"></div></td>
+							</tr>
+								{-/section-}
+						</tbody>
+					</table>
+                    <div id="pager" style="float:right;">
+                    	{-$page-}
+                    </div>
+                </div>
+                
+            </div>
+            <div id="sidebar">
+  				<ul>
+                	<li><h3><a href="#" class="house">Dashboard</a></h3>
+                        <ul>
+                        	<li><a href="#" class="report">Sales Report</a></li>
+                    		<li><a href="#" class="report_seo">SEO Report</a></li>
+                            <li><a href="#" class="search">Search</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="#" class="folder_table">Orders</a></h3>
+          				<ul>
+                        	<li><a href="#" class="addorder">New order</a></li>
+                          <li><a href="#" class="shipping">Shipments</a></li>
+                            <li><a href="#" class="invoices">Invoices</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="#" class="manage">Manage</a></h3>
+          				<ul>
+                            <li><a href="#" class="manage_page">Pages</a></li>
+                            <li><a href="#" class="cart">Products</a></li>
+                            <li><a href="#" class="folder">Product categories</a></li>
+            				<li><a href="#" class="promotions">Promotions</a></li>
+                        </ul>
+                    </li>
+                  <li><h3><a href="#" class="user">Users</a></h3>
+          				<ul>
+                            <li><a href="#" class="useradd">Add user</a></li>
+                            <li><a href="#" class="group">User groups</a></li>
+            				<li><a href="#" class="search">Find user</a></li>
+                            <li><a href="#" class="online">Users online</a></li>
+                        </ul>
+                    </li>
+				</ul>       
+          </div>
+      </div>
+      <script language="javascript">
+	function getsaleranking(pid){
+		if($("#page_"+pid).css("display")=="none") {
+			var data='<iframe src="{-$root_url-}?module=ajax&action=sale&pid='+pid+'" style="height: 205px; visibility: inherit; width: 100%; z-index: 1;">';
+			$("#page_"+pid).html(data);
+			$("#page_"+pid).show();
+		}
+		else {
+			$("#page_"+pid).hide();
+		}
+	}
+	</script>
+        <div id="footer">
+        <div id="credits">
+   		Power by <a href="http://www.milanoo.com">Milanoo</a>
+        </div>
+        <div id="styleswitcher">
+            <ul>
+                <li><a href="javascript: document.cookie='theme='; window.location.reload();" title="Default" id="defswitch">d</a></li>
+                <li><a href="javascript: document.cookie='theme=1'; window.location.reload();" title="Blue" id="blueswitch">b</a></li>
+                <li><a href="javascript: document.cookie='theme=2'; window.location.reload();" title="Green" id="greenswitch">g</a></li>
+                <li><a href="javascript: document.cookie='theme=3'; window.location.reload();" title="Brown" id="brownswitch">b</a></li>
+                <li><a href="javascript: document.cookie='theme=4'; window.location.reload();" title="Mix" id="mixswitch">m</a></li>
+            </ul>
+        </div><br />
+
+        </div>
+</div>
+</body>
+
+</html>

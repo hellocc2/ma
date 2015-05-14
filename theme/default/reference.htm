@@ -1,0 +1,8 @@
+<script>
+	(function($) {
+		$(window.parent.frames["topFrame"].document).find( "#website-options,#country-options").bind("change", function() {
+			var frame_url = $("#frame_url").val() + $(this).val();
+			window.location = frame_url;
+		});
+	})(jQuery);
+</script>

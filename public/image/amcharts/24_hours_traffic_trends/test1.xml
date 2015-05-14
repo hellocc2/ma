@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart>
+  <series>
+    <value xid="0">11-11-20 22:00:00</value>
+    <value xid="1">11-11-20 23:00:00</value>
+    <value xid="2">11-11-21 0:00:00</value>
+    <value xid="3">11-11-21 1:00:00</value>
+    <value xid="4">11-11-21 2:00:00</value>
+    <value xid="5">11-11-21 3:00:00</value>
+    <value xid="6">11-11-21 4:00:00</value>
+    <value xid="7">11-11-21 5:00:00</value>
+    <value xid="8">11-11-21 6:00:00</value>
+    <value xid="9">11-11-21 7:00:00</value>
+    <value xid="10">11-11-21 8:00:00</value>
+    <value xid="11">11-11-21 9:00:00</value>
+    <value xid="12">11-11-21 10:00:00</value>
+    <value xid="13">11-11-21 11:00:00</value>
+    <value xid="14">11-11-21 12:00:00</value>
+    <value xid="15">11-11-21 13:00:00</value>
+    <value xid="16">11-11-21 14:00:00</value>
+    <value xid="17">11-11-21 15:00:00</value>
+    <value xid="18">11-11-21 16:00:00</value>
+    <value xid="19">11-11-21 17:00:00</value>
+    <value xid="20">11-11-21 18:00:00</value>
+    <value xid="21">11-11-21 19:00:00</value>
+    <value xid="22">11-11-21 20:00:00</value>
+    <value xid="23">11-11-21 21:00:00</value>
+    <value xid="24">11-11-21 22:00:00</value>
+    <value xid="25">11-11-21 23:00:00</value>
+    <value xid="26">11-11-22 0:00:00</value>
+  </series>
+  <graphs>
+    <graph title="IP" line_width="2" bullet="round" color="#FCD202">
+      <value xid="0">0</value>
+      <value xid="1">0</value>
+      <value xid="2">6974</value>
+      <value xid="3">69740</value>
+      <value xid="4">111584</value>
+      <value xid="5">10461</value>
+      <value xid="6">3487</value>
+      <value xid="7">0</value>
+      <value xid="8">0</value>
+      <value xid="9">0</value>
+      <value xid="10">0</value>
+      <value xid="11">0</value>
+      <value xid="12">0</value>
+      <value xid="13">0</value>
+      <value xid="14">0</value>
+      <value xid="15">0</value>
+      <value xid="16">0</value>
+      <value xid="17">0</value>
+      <value xid="18">0</value>
+      <value xid="19">3487</value>
+      <value xid="20">0</value>
+      <value xid="21">0</value>
+      <value xid="22">0</value>
+      <value xid="23">3487</value>
+      <value xid="24">0</value>
+      <value xid="25">0</value>
+      <value xid="26">0</value>
+    </graph>
+  </graphs>
+</chart>

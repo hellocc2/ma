@@ -1,0 +1,48 @@
+{-include file="header.htm"-}
+{-include file="reference.htm"-}
+<style> 
+#rightnow ul li {float:left;margin-left:-1px;}
+#rightnow ul li a {display:block;width:30px;height:30px;line-height:30px;text-align:center;border:1px solid #ddd;background-color:#f1f1f1;}
+</style>
+<script src="{-$javascript_url-}amcharts.js" type="text/javascript"></script>
+
+<body>
+	<input id="frame_url" type="hidden" value="{-$smarty.server.REQUEST_URI-}"/>
+	<div id="container"> 
+        <div id="wrapper">
+            <div id="content">
+       			<div id="rightnow">
+                    <h3 class="reallynow">
+                        <span>权限组管理</span>
+                    </h3>
+			  </div>
+			  
+			  <div id="rightnow">
+                  
+			  </div>			  
+			  
+              <div id="infowrap">
+	              <div id="infobox">
+						<div class="mini-layout" style="margin:20px;width:190px;">
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" class="tableborder">
+							<tr class="header">
+								<td width="30%" align="center">名称:</td>
+							  <td align="center" width="30%">操作</td>
+							</tr>
+							{-section name=competence_all loop=$competence_all-}
+							<tr align="center"><td class="altbg1">{-$competence_all[competence_all].name-}</td><td class="altbg2"><a href="?module=competence&action=Index&operate=edit&id={-$competence_all[competence_all].id-}">[编辑]</a>
+							<a href="?module=competence&action=Index&act=del&id={-$competence_all[competence_all].id-}" onClick="javascript: return confirm('删除权限组将所有该权限下的系统用户改变为自定义权限；\r\n且用户没有任务系统操作权限；\r\n\r\n确定要删除选中项吗？'); ">[删除]</a>
+							</td></tr>
+							{-/section-}
+							</table>
+						</div>	     
+	              </div>
+              </div>
+            </div>
+            
+      </div>
+        
+</div>
+</body>
+
+</html>

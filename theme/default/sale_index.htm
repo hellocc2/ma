@@ -1,0 +1,492 @@
+{-include file="header.htm"-}
+{-include file="reference.htm"-}
+<script src="{-$javascript_url-}amcharts.js" type="text/javascript"></script>
+<style>
+#rightnow ul li {float:left;margin-left:-1px;}
+#rightnow ul li a {display:block;width:30px;height:30px;line-height:30px;text-align:center;border:1px solid #ddd;background-color:#f1f1f1;}
+</style>
+<body>
+	<input id="frame_url" type="hidden" value="{-$smarty.server.REQUEST_URI-}"/>
+	<div id="container">
+        <div id="wrapper"> 
+            <div id="content">
+       			<div id="rightnow">
+                    <h3 class="reallynow">
+                        <span>统计</span>
+                          {-include file="time_lang.htm"-}
+                        <br />
+                    </h3>
+				    
+			  </div>  
+			  <div id="rightnow">
+                   
+                          <div style="float:right;width:120px;clear:both;"> 
+                          <ul style="list-style-type:none;">
+							<li ><a href="?module=sale&action=index">日</a></li>
+							<li><a href="?module=sale&action=index&time=week">周</a></li>
+							<li><a href="?module=sale&action=index&time=month">月</a></li>
+							</ul>
+							</div>
+                     <div style="clear:both;height:1px;overflow:hidden;"></div>
+                    
+				    
+			  </div>
+              <div id="infowrap">
+              <div id="infobox">
+           <script type="text/javascript">
+           var averagenum = 30;
+           var chart;
+           var chartData_1 = [
+                 			{-foreach item=list from=$sell_list-}            
+                                {
+                         	   "date":"{-$list.date-}",
+                         	   //"url":"?module=Conversion&action=hourrate&date={-$list.time-}",
+                         		{-foreach item=sell key=k from=$list.sell-}
+                         	   	"OrdersAmount{-$k-}":"{-$sell.OrdersAmount-}",
+                         	   "ProductAmount{-$k-}":"{-$sell.ProductAmount-}",
+                         	  	"LogisticsAmount{-$k-}":"{-$sell.LogisticsAmount-}",
+                         	 	"OrderNum{-$k-}":"{-$sell.OrderNum-}",
+                         	 	"AllAmount":"{-$list.sell_amount_wap+$list.sell_amount_web+$list.sell_amount_ipad+$list.sell_amount_ios+$list.sell_amount_android-}",
+                         	 	"MobileAmount":"{-$list.sell_amount_wap+$list.sell_amount_ipad+$list.sell_amount_ios+$list.sell_amount_android-}",
+                         	  {-/foreach-}
+                         	   },
+                         	   {-/foreach-}];
+           var allnum="{-$sell_list|@count-}";
+           //var chartData_1 =[{"ip":"112","newUv":"36","pv":"210","uv":"43","time":"13:12"},{"ip":"97","newUv":"28","pv":"189","uv":"30","time":"13:13"},{"ip":"99","newUv":"31","pv":"189","uv":"33","time":"13:14"},{"ip":"103","newUv":"49","pv":"209","uv":"51","time":"13:15"},{"ip":"102","newUv":"36","pv":"203","uv":"41","time":"13:16"},{"ip":"97","newUv":"29","pv":"172","uv":"32","time":"13:17"},{"ip":"109","newUv":"37","pv":"202","uv":"43","time":"13:18"},{"ip":"107","newUv":"37","pv":"188","uv":"40","time":"13:19"},{"ip":"107","newUv":"44","pv":"234","uv":"48","time":"13:20"},{"ip":"119","newUv":"56","pv":"233","uv":"63","time":"13:21"},{"ip":"91","newUv":"34","pv":"178","uv":"43","time":"13:22"},{"ip":"114","newUv":"60","pv":"204","uv":"65","time":"13:23"},{"ip":"115","newUv":"65","pv":"230","uv":"68","time":"13:24"},{"ip":"101","newUv":"45","pv":"189","uv":"46","time":"13:25"},{"ip":"104","newUv":"53","pv":"226","uv":"57","time":"13:26"}];
+           var average ='4';
+           AmCharts.ready(function () {
+
+           	// SERIAL CHART    
+           	chart = new AmCharts.AmSerialChart();
+           	//chart.pathToImages = "../amcharts/images/";
+           	chart.pathToImages = "http://www.amcharts.com/lib/images/";
+           	chart.zoomOutButton = {
+           		backgroundColor: '#000000',
+           		backgroundAlpha: 0.15
+           	};
+           	chart.backgroundColor= '#FFFFFF';
+           	chart.backgroundAlpha= 0.95;
+           	chart.dataProvider = chartData_1;
+           	chart.categoryField = "date";
+           	//chart.addTitle("数据分析（小时）", 15);
+           	// AXES
+           	// category
+           	var categoryAxis = chart.categoryAxis;
+           	categoryAxis.labelRotation = 45;
+           	categoryAxis.dashLength = 1;
+           	categoryAxis.gridAlpha = 0.15;
+           	categoryAxis.axisColor = "#DADADA";
+
+           	// value                
+           	var valueAxis = new AmCharts.ValueAxis();
+           	valueAxis.axisColor = "#DADADA";
+           	valueAxis.dashLength = 1;
+              // valueAxis.logarithmic = true; // this line makes axis logarithmic
+           	chart.addValueAxis(valueAxis);
+
+           	// GRAPH 1
+           	var graph = new AmCharts.AmGraph();
+           	graph.type = "smoothedLine";
+           	graph.bulletSize = 7;
+           	if(allnum<averagenum){
+            	graph.bullet = "round";
+           	}
+           	graph.balloonText = "WAP销售额 : [[OrdersAmount2]]";
+           	graph.title = "WAP销售额";
+           	graph.valueField = "OrdersAmount2";
+           	graph.lineThickness = 2;
+           	graph.lineColor = "#CC0000";
+           	chart.addGraph(graph);
+           				
+           	// GRAPH 2
+           	var graph = new AmCharts.AmGraph();
+           	graph.type = "smoothedLine";
+           	graph.bulletSize = 7;
+           	if(allnum<averagenum){
+            	graph.bullet = "round";
+           	}
+           	graph.balloonText = "IOS销售额 : [[OrdersAmount3]]";
+           	graph.title = "IOS销售额";
+           	graph.valueField = "OrdersAmount3";
+           	graph.lineThickness = 2;
+           	graph.lineColor = "#2E7824";
+           	chart.addGraph(graph);
+           	
+           	// GRAPH 3
+           	var graph = new AmCharts.AmGraph();
+           	graph.type = "smoothedLine";
+           	graph.bulletSize = 7;
+           	if(allnum<averagenum){
+            	graph.bullet = "round";
+           	}
+           	graph.balloonText = "WAP订单数 : [[OrderNum2]]";
+           	graph.title = "WAP订单数";
+           	graph.valueField = "OrderNum2";
+           	graph.lineThickness = 2;
+           	graph.lineColor = "#FF9E01";
+           	chart.addGraph(graph);
+           	
+           	// GRAPH 4
+           	var graph = new AmCharts.AmGraph();
+           	graph.type = "smoothedLine";
+           	graph.bulletSize = 7;
+           	if(allnum<averagenum){
+            	graph.bullet = "round";
+           	}
+           	graph.balloonText = "Android销售额 : [[OrdersAmount4]]";
+           	graph.title = "Android销售额";
+           	graph.valueField = "OrdersAmount4";
+           	graph.lineThickness = 2;
+           	graph.lineColor = "#69A55C";
+           	chart.addGraph(graph);
+           	
+         	// GRAPH 5
+           	var graph = new AmCharts.AmGraph();
+           	graph.type = "smoothedLine";
+           	graph.bulletSize = 7;
+           	if(allnum<averagenum){
+            	graph.bullet = "round";
+           	}
+           	graph.balloonText = "平板销售额 : [[OrdersAmount5]]";
+           	graph.title = "平板销售额";
+           	graph.valueField = "OrdersAmount5";
+           	graph.lineThickness = 2;
+           	graph.lineColor = "#FF5544";
+           	chart.addGraph(graph);
+           	
+         	// GRAPH 6
+           	var graph = new AmCharts.AmGraph();
+           	graph.type = "smoothedLine";
+           	graph.bulletSize = 7;
+           	if(allnum<averagenum){
+            	graph.bullet = "round";
+           	}
+           	graph.balloonText = "移动销售额 : [[MobileAmount]]";
+           	graph.title = "移动销售额";
+           	graph.valueField = "MobileAmount";
+           	graph.lineThickness = 2;
+           	graph.lineColor = "#0072FE";
+           	chart.addGraph(graph);
+           	
+         	// GRAPH 7
+           	var graph = new AmCharts.AmGraph();
+           	graph.type = "smoothedLine";
+           	graph.bulletSize = 7;
+           	if(allnum<averagenum){
+            	graph.bullet = "round";
+           	}
+           	graph.balloonText = "WAP商品销售额 : [[ProductAmount2]]";
+           	graph.title = "WAP商品销售额";
+           	graph.valueField = "ProductAmount2";
+           	graph.lineThickness = 2;
+           	graph.lineColor = "#00BBCC";
+           	chart.addGraph(graph);
+           	
+         	// GRAPH 8
+           	var graph = new AmCharts.AmGraph();
+           	graph.type = "smoothedLine";
+           	graph.bulletSize = 7;
+           	if(allnum<averagenum){
+            	graph.bullet = "round";
+           	}
+           	graph.balloonText = "销售额 : [[AllAmount]]";
+           	graph.title = "销售额";
+           	graph.valueField = "AllAmount";
+           	graph.lineThickness = 2;
+           	graph.lineColor = "#E287EC";
+           	chart.addGraph(graph);
+           				
+           	// CURSOR
+           	var chartCursor = new AmCharts.ChartCursor();
+           	chartCursor.cursorPosition = "mouse";
+           	chart.addChartCursor(chartCursor);
+
+           	// SCROLLBAR
+           	var chartScrollbar = new AmCharts.ChartScrollbar();
+           	chart.addChartScrollbar(chartScrollbar);
+           		
+           	 // LEGEND
+           	var legend = new AmCharts.AmLegend();
+           	legend.markerType = "circle";
+           	chart.addLegend(legend);
+           	// WRITE
+           	chart.graphs[7].hidden = true;
+           	chart.graphs[6].hidden = true;
+           	chart.write("chartdiv");
+           		
+           	});
+        </script>
+                    <p id="chartdiv" style="width:100%; height:350px;"></p>            
+                  </div>
+                  <div id="infobox" class="margin-left">
+            <script type="text/javascript">
+            var chart;
+            var chartData = [
+                    			{-foreach item=list from=$sell_list-}            
+                                   {
+                            	   "year":"{-$list.date-}",
+                            	   //"url":"?module=Conversion&action=hourrate&date={-$list.time-}",
+                            		"wap":"{-$list.sell_amount_wap-}",
+                            		"web":"{-$list.sell_amount_web-}",
+                            		"wap_rate":"{-$list.wap_rate-}",
+                            		"ipad_rate":"{-$list.ipad_rate-}",
+                            		"ios_rate":"{-$list.ios_rate-}",
+                            		"android_rate":"{-$list.android_rate-}",
+                            		"mobile_rate":"{-$list.mobile_rate-}",
+                            	   },
+                            	   {-/foreach-}];
+          
+            /*AmCharts.ready(function () {
+                // SERIAL CHART
+                chart = new AmCharts.AmSerialChart();
+                chart.pathToImages = "../amcharts/images/";
+                chart.zoomOutButton = {
+                    backgroundColor: "#000000",
+                    backgroundAlpha: 0.15
+                };
+                chart.dataProvider = chartData;
+                chart.categoryField = "year";
+
+                chart.addTitle("销售占比", 15);
+
+                // AXES
+                // Category
+                var categoryAxis = chart.categoryAxis;
+                categoryAxis.gridAlpha = 0.07;
+                categoryAxis.axisColor = "#DADADA";
+                categoryAxis.startOnAxis = true;
+
+                // Value
+                var valueAxis = new AmCharts.ValueAxis();
+                valueAxis.title = "percent"; // this line makes the chart "stacked"
+                valueAxis.stackType = "100%";
+                valueAxis.gridAlpha = 0.07;
+                chart.addValueAxis(valueAxis);
+
+                // GRAPHS
+                // first graph
+                var graph = new AmCharts.AmGraph();
+                graph.type = "line"; // it's simple line graph
+                graph.title = "wap";
+                graph.valueField = "wap";
+                graph.balloonText = "[[value]] ([[percents]]%)";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 0.6; // setting fillAlphas to > 0 value makes it area graph 
+                chart.addGraph(graph);
+
+                // second graph
+                var graph = new AmCharts.AmGraph();
+                graph.type = "line";
+                graph.title = "web";
+                graph.valueField = "web";
+                graph.balloonText = "[[value]] ([[percents]]%)";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 0.6;
+                chart.addGraph(graph);
+
+                // LEGEND
+                var legend = new AmCharts.AmLegend();
+                legend.align = "center";
+                chart.addLegend(legend);
+
+                // CURSOR
+                var chartCursor = new AmCharts.ChartCursor();
+                chartCursor.zoomable = false; // as the chart displayes not too many values, we disabled zooming
+                chartCursor.cursorAlpha = 0;
+                chart.addChartCursor(chartCursor);
+				*/
+				
+		           AmCharts.ready(function () {
+
+		           	// SERIAL CHART    
+		           	chart = new AmCharts.AmSerialChart();
+		           	//chart.pathToImages = "../amcharts/images/";
+		           	chart.pathToImages = "http://www.amcharts.com/lib/images/";
+		           	chart.zoomOutButton = {
+		           		backgroundColor: '#000000',
+		           		backgroundAlpha: 0.15
+		           	};
+		           	chart.backgroundColor= '#FFFFFF';
+		           	chart.backgroundAlpha= 0.95;
+		           	chart.dataProvider = chartData;
+		           	chart.categoryField = "year";
+		           	//chart.addTitle("数据分析（小时）", 15);
+		           	// AXES
+		           	// category
+		           	var categoryAxis = chart.categoryAxis;
+		           	categoryAxis.labelRotation = 45;
+		           	categoryAxis.dashLength = 1;
+		           	categoryAxis.gridAlpha = 0.15;
+		           	categoryAxis.axisColor = "#DADADA";
+
+		           	// value                
+		           	var valueAxis = new AmCharts.ValueAxis();
+		           	valueAxis.axisColor = "#DADADA";
+		           	valueAxis.dashLength = 1;
+		              // valueAxis.logarithmic = true; // this line makes axis logarithmic
+		           	chart.addValueAxis(valueAxis);
+
+		           	// GRAPH 1
+		           	var graph = new AmCharts.AmGraph();
+		           	graph.type = "smoothedLine";
+		           	graph.bulletSize = 7;
+		           	if(allnum<averagenum){
+		            	graph.bullet = "round";
+		           	}
+		           	graph.balloonText = "Wap销售占比 : [[wap_rate]]%";
+		           	graph.title = "Wap销售占比";
+		           	graph.valueField = "wap_rate";
+		           	graph.lineThickness = 2;
+		           	graph.lineColor = "#00BBCC";
+		           	chart.addGraph(graph);
+		           	
+		        	// GRAPH 2
+		           	var graph = new AmCharts.AmGraph();
+		           	graph.type = "smoothedLine";
+		           	graph.bulletSize = 7;
+		           	if(allnum<averagenum){
+		            	graph.bullet = "round";
+		           	}
+		           	graph.balloonText = "平板销售占比 : [[ipad_rate]]%";
+		           	graph.title = "平板销售占比";
+		           	graph.valueField = "ipad_rate";
+		           	graph.lineThickness = 2;
+		           	graph.lineColor = "#2E7824";
+		           	chart.addGraph(graph);
+		           	
+		           	// GRAPH 3
+		           	var graph = new AmCharts.AmGraph();
+		           	graph.type = "smoothedLine";
+		           	graph.bulletSize = 7;
+		           	if(allnum<averagenum){
+		            	graph.bullet = "round";
+		           	}
+		           	graph.balloonText = "移动销售占比 : [[mobile_rate]]%";
+		           	graph.title = "移动销售占比";
+		           	graph.valueField = "mobile_rate";
+		           	graph.lineThickness = 2;
+		           	graph.lineColor = "#FF9E01";
+		           	chart.addGraph(graph);
+		           	
+		         	// GRAPH 4
+		           	var graph = new AmCharts.AmGraph();
+		           	graph.type = "smoothedLine";
+		           	graph.bulletSize = 7;
+		           	if(allnum<averagenum){
+		            	graph.bullet = "round";
+		           	}
+		           	graph.balloonText = "IOS销售占比 : [[ios_rate]]%";
+		           	graph.title = "IOS销售占比";
+		           	graph.valueField = "ios_rate";
+		           	graph.lineThickness = 2;
+		           	graph.lineColor = "#E287EC";
+		           	chart.addGraph(graph);
+		           	
+		         	// GRAPH 5
+		           	var graph = new AmCharts.AmGraph();
+		           	graph.type = "smoothedLine";
+		           	graph.bulletSize = 7;
+		           	if(allnum<averagenum){
+		            	graph.bullet = "round";
+		           	}
+		           	graph.balloonText = "Android销售占比 : [[android_rate]]%";
+		           	graph.title = "Android销售占比";
+		           	graph.valueField = "android_rate";
+		           	graph.lineThickness = 2;
+		           	graph.lineColor = "#FF5544";
+		           	chart.addGraph(graph);
+		           	
+		           		
+		         	// CURSOR
+		           	var chartCursor = new AmCharts.ChartCursor();
+		           	chartCursor.cursorPosition = "mouse";
+		           	chart.addChartCursor(chartCursor);
+
+		           	// SCROLLBAR
+		           	var chartScrollbar = new AmCharts.ChartScrollbar();
+		           	chart.addChartScrollbar(chartScrollbar);
+		           	
+		         	// LEGEND
+		           	var legend = new AmCharts.AmLegend();
+		           	legend.markerType = "circle";
+		           	chart.addLegend(legend);
+		           	
+                // WRITE
+                //chart.graphs[3].hidden = true;
+                //chart.graphs[4].hidden = true;
+                chart.write("chartdiv2");
+            });
+        </script>
+                    <p id="chartdiv2" style="width: 100%; height: 350px;"></p>  
+                  </div>
+                 <div id="infobox">
+				<h3>访问量分布</h3>
+				<table border=1>
+					<thead>
+						<tr>
+							<th></th>
+							<th>手机销售额（万美金）</th>
+							<th>平板销售额（万美金）</th>
+							<th>移动销售额（万美金）</th>
+							<th>移动订单数</th>
+							<th>移动客单价</th>
+							<th>总销售额（万美金）</th>
+							<th>WEB销售额</th>
+							<th>WEB订单数</th>
+							<th>WEB客单价</th>
+							<th>手机比例</th>
+							<th>平板比例</th>
+							<th>移动比例</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+					<tr align='center'>
+						<td> 总计</td>
+						<td> {-$sell_wap-}</td>
+						<td> {-$sell_ipad-}</td>
+						<td> {-$sell_ipad+$sell_wap-}</td>
+						<td> {-$sell_num-}</td>
+						<td> {-$sell_wap/$sell_num|string_format:'%.2f'-}</td>
+						<td> {-$sell_wap+$sell_web+$sell_ipad-}</td>
+						<td> {-$sell_web-}</td>
+						<td> {-$sell_web_num-}</td>
+						<td> {-$sell_web/$sell_web_num|string_format:'%.2f'-}</td>
+						<td> {-$sell_rate-}%</td>
+						<td> {-$sell_rate_ipad-}%</td>
+						<td> {-$sell_mobile-}%</td>
+					</tr>
+					{-foreach item=list from=$sell_list-}          
+					{-assign var=phone value=$list.sell_amount_wap+$list.sell_amount_ios+$list.sell_amount_android-}  
+                     <tr align='center'>
+						<td> {-$list.date-}</td>
+						<td> {-$list.sell_amount_wap+$list.sell_amount_ios+$list.sell_amount_android-}</td>
+						<td> {-$list.sell_amount_ipad-}</td>
+						<td> {-$list.sell_amount_ipad+$list.sell_amount_wap+$list.sell_amount_ios+$list.sell_amount_android-}</td>
+						<td> {-$list.sell_num_wap-}</td>
+						<td> {-$phone/$list.sell_num_wap|string_format:'%.2f'-}</td>
+						<td> {-$list.sell_amount_wap+$list.sell_amount_web+$list.sell_amount_ipad+$list.sell_amount_ios+$list.sell_amount_android-}</td>
+						<td> {-$list.sell_amount_web-}</td>
+						<td> {-$list.sell_num_web-}</td>
+						<td> {-$list.sell_amount_web/$list.sell_num_web|string_format:'%.2f'-}</td>
+						<td> {-$list.phone_rate-}%</td>
+						<td> {-$list.ipad_rate-}%</td>
+						<td> {-$list.mobile_rate-}%</td>
+						
+					</tr> 
+                    {-/foreach-}
+				
+					</tbody>
+				</table>
+			</div> 
+                 
+                  
+              </div>
+            </div>
+            
+      </div>
+        
+</div>
+</body>
+
+</html>

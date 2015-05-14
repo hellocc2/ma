@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <reload_data_interval>60</reload_data_interval>
+  <digits_after_decimal>0</digits_after_decimal>
+  <context_menu>
+  </context_menu>
+  <graphs>
+    <graph gid="1">
+      <title>老客户</title>
+      <color>33AAEE</color>
+	  <balloon_text><![CDATA[{title} <b>{value}</b><br>{description}]]></balloon_text>
+    </graph>
+    <graph gid="2">
+      <title>新客户</title>
+      <color>CC0000</color>
+	  <balloon_text><![CDATA[{title} <b>{value}</b><br>{description}]]></balloon_text>
+    </graph>	
+  </graphs>
+  <labels>
+    <label lid="0">
+      <!--- <text><![CDATA[<b></b>]]></text> -->
+      <y>20</y>
+      <width>520</width>
+      <align>center</align>
+
+    </label>
+  </labels>
+</settings>

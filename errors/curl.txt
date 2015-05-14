@@ -1,0 +1,1378 @@
+request--http://192.168.11.21:8080/products/products/getProductsCategory.htm?parentCategoryId=1&languageCode=en-uk&returnLevel=1&returnChildNum=-1%3A-1
+array (
+  'code' => '11001',
+  'msg' => '非法的商品类目ID:1',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=+&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword= , categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=%E9%9E%8B&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=鞋, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=%E9%9E%8B+&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=鞋 , categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=%E9%9E%8B+&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=鞋 , categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=%E9%9E%8B&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=鞋, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=%E6%9C%89&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=有, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=%E9%9E%8B&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=鞋, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=1&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=1, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=1+&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=1 , categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=+&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword= , categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=%E9%9E%8B&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=鞋, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=1&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=1, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=1&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=1, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=1&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=1, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=A%E5%AD%97&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=A字, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=A%E5%AD%97&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=A字, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=A%E5%AD%97&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=A字, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.21:8080/products/productCategory/searchProductsCategory.htm?keyword=A%E5%AD%97&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '10000',
+  'msg' => '[getList(nameSpace=productCategory,idPostfix=searchProductsCategoryCode,obj={activate=null, websiteId=1, keyword=A字, categoryCode=null, langId=1})]get List from database in ',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=0&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=0&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=0&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?parentCategoryId=0&languageCode=en-uk&returnLevel=1&returnChildNum=-1%3A-1&websiteId=1
+NULL
+end--
+request--request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/searchProductsCategory.htm?keyword=&langCode=zh-cn&categoryId=0
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:websiteId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/searchProductsCategory.htm?keyword=&langCode=zh-cn&categoryId=0
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:websiteId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/searchProductsCategory.htm?kcategoryId=0&langCode=zh-cn&categoryId=0
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:websiteId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/searchProductsCategory.htm?kcategoryId=0&langCode=zh-cn&categoryId=0
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:websiteId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?kcategoryId=391&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '11003',
+  'msg' => '非法的语言代码:language is empty!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?kcategoryId=391&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '11003',
+  'msg' => '非法的语言代码:language is empty!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?kcategoryId=391&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '11003',
+  'msg' => '非法的语言代码:language is empty!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?kcategoryId=391&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '11003',
+  'msg' => '非法的语言代码:language is empty!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?kcategoryId=391&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '11003',
+  'msg' => '非法的语言代码:language is empty!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?kcategoryId=391&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '11003',
+  'msg' => '非法的语言代码:language is empty!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?kcategoryId=391&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '11003',
+  'msg' => '非法的语言代码:language is empty!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?parentCategoryId=391&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '11003',
+  'msg' => '非法的语言代码:language is empty!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?parentCategoryId=391&langCode=zh-cn&categoryId=0&websiteId=1
+array (
+  'code' => '11003',
+  'msg' => '非法的语言代码:language is empty!',
+)
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?parentCategoryId=0&languageCode=en-uk&returnLevel=1&returnChildNum=-1%3A-1%3A-1&websiteId=1
+NULL
+end--
+request--http://192.168.11.16:8080/products/products/getProductsCategory.htm?parentCategoryId=0&languageCode=en-uk&returnLevel=1&returnChildNum=-1&websiteId=1
+NULL
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=1900&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=4480&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3994&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=4480&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3994&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=4480&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3994&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8187&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3082&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3082&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3082&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3082&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3082&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3082&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3082&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3082&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=3082&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=7388&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5340&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=5058&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10000',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=8709&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:do not get category code by categoryId!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+request--http://192.168.11.16:8080/products/productCategory/productsCategoryNav.htm?categoryId=undefined&langCode=zh-cn&websiteId=1
+array (
+  'code' => '10001',
+  'msg' => '非法的参数:categoryId is not a number!',
+)
+end--
+

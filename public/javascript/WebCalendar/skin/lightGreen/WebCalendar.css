@@ -1,0 +1,48 @@
+.WebDate {border:1px solid #999999;height:20px;background:#ffffff url(../datePicker.gif) no-repeat right;}
+/*容器*/
+div.CalendarPanel {width:176px;background-color:#ffffff;border:1px solid #77bbaa;font-size:12px;}
+/*####################年月选择部分####################*/
+table.CalendarTop {border:0px solid #77bbaa;font-size:12px;}
+.CalendarTop tr.title {}/*选择年月行*/
+/*上一月下一月共同样式*/
+.CalendarTop tr.title input {font-size:12px;padding-left:2px;padding-right:2px;padding-top:2px;cursor:pointer;color:#000000;border:1px solid #77bbaa;background-color:#bdebee;}
+.CalendarTop tr.title th.prevMonth {width:5%;}/*放置上一月的按钮td*/
+.CalendarTop tr.title th.prevMonth input {width:20px;}/*上一月的按钮*/
+.CalendarTop tr.title th.YearMonth {width:90%;}/*放置年月下拉框的td*/
+.CalendarTop tr.title th.YearMonth select {font-size:12px;width:60px;}/*年月下拉框*/
+.CalendarTop tr.title select.Year {}/*年下拉框*/
+.CalendarTop tr.title select.Month {}/*月下拉框*/
+.CalendarTop tr.title th.nextMonth {width:5%;}/*放置下一月的按钮td*/
+.CalendarTop tr.title th.nextMonth input {width:20px;}/*下一月的按钮*/
+
+/*####################日期选择部分####################*/
+/*日期表格*/
+table.CalendarDate {border:0px solid #ffffff;background-color:#ffffff;font-size:12px;}
+/*日期头*/
+.CalendarDate tr.title {}
+/*头部星期几td*/
+.CalendarDate tr.title th {padding-top:3px;padding-bottom:3px;text-align:center;font-weight:normal;background-color:#bdebee;color:#000000;}
+/*日期行*/
+.CalendarDate tr.date {}
+.CalendarDate tr.date td {padding-top:3px;padding-bottom:3px;text-align:center;background-color:#daf3f5;}
+.CalendarDate tr.date td.sun {cursor:default;color:#ff0000;}/*星期天文字*/
+.CalendarDate tr.date td.sat {cursor:default;color:#0000ff;}/*星期六文字*/
+.CalendarDate tr.date td.day {cursor:default;color:#000000;}/*星期一至五*/
+.CalendarDate tr.date td.today {cursor:default;background-color:#bdebee;color:#000000;}/*当日日期*/
+.CalendarDate tr.date td.selDay {cursor:default;background-color:#72cc99;color:#000000;}/*已被选择的日期*/
+.CalendarDate tr.date td.dayOver {cursor:pointer;background-color:#99dee9;}/*鼠标移过*/
+
+/*####################时间选择部分####################*/
+/*时间表格*/
+table.CalendarTime {border:0px solid #ffffff;background-color:#ffffff;font-size:12px;}
+.CalendarTime tr {}
+.CalendarTime tr td {}
+.CalendarTime tr td select {font-size:12px;width:40px;}/*时分秒下拉框*/
+.CalendarTime tr td select.Hour {}/*时间下拉框*/
+.CalendarTime tr td select.Minute {}/*分钟下拉框*/
+.CalendarTime tr td select.Second {}/*秒钟下拉框*/
+
+/*####################按钮部分####################*/
+div.CalendarButtonDiv {padding:4px 4px 4px 4px;background-color:#ffffff;}
+.CalendarButtonDiv input {width:40px;font-size:12px;padding-left:2px;padding-right:2px;cursor:pointer;color:#000000;border:1px solid #77bbaa;padding-top:2px;background-color:#bdebee;}
+right:2px;cursor:pointer;color:#000000;border:1px solid #77bbaa;padding-top:2px;background-color:#bdebee;}
