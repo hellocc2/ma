@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-08-08 15:20:23
+<?php /* Smarty version 2.6.18, created on 2015-08-09 11:35:22
          compiled from operate_history.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headnav', 'operate_history.html', 35, false),array('function', 'html_account', 'operate_history.html', 51, false),array('function', 'html_siderbar', 'operate_history.html', 55, false),)), $this); ?>
@@ -128,7 +128,16 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headna
 									备注
 								</th>
 								<th>
+									开盘
+								</th>
+								<th>
+									结算
+								</th>
+								<th>
 									事件
+								</th>
+								<th>
+									操作
 								</th>
 							</tr>
 							</thead>
@@ -150,13 +159,22 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headna
 									45.4
 								</td>
 								<td>
-									2手
+									2美元
 								</td>
 								<td>
-									开盘点
+									最高
+								</td>
+								<td>
+									否
+								</td>
+								<td>
+									否
 								</td>
 								<td>
 									无
+								</td>
+								<td>
+									编辑| 删除
 								</td>
 							</tr>
 							<tr>
@@ -176,13 +194,22 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headna
 									45.4
 								</td>
 								<td>
-									2手
+									2美元
 								</td>
 								<td>
-									最高点
+									次高
+								</td>
+								<td>
+									否
+								</td>
+								<td>
+									否
 								</td>
 								<td>
 									EIA
+								</td>
+								<td>
+									编辑| 删除
 								</td>
 							</tr>
 							</tbody>

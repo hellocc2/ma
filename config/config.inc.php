@@ -1,6 +1,6 @@
 <?php
 define('MAGIC_QUOTES_GPC', get_magic_quotes_gpc());//函数取得 PHP 环境配置的变量
-
+date_default_timezone_set('PRC'); 
 if($_SERVER["SERVER_PORT"]==443)  $http="https"; else  $http="http";
 
 if (!defined('HTTP')) define('HTTP', $http);

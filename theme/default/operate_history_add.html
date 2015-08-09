@@ -16,7 +16,7 @@
     <link href="{-$media-}/css/adminia.css" rel="stylesheet" /> 
     <link href="{-$media-}/css/adminia-responsive.css" rel="stylesheet" /> 
     
-    
+    <link href="{-$media-}/css/timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />  
     <link href="{-$media-}/css/pages/plans.css" rel="stylesheet" /> 
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -58,10 +58,7 @@
 				
 				<hr />
 				
-				<div class="sidebar-extra">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-				</div> <!-- .sidebar-extra -->
-				
+								
 				<br />
 		
 			</div> <!-- /span3 -->
@@ -100,25 +97,24 @@
 									<fieldset>
 										
 										<div class="control-group">											
-											<label class="control-label" for="firstname">日期</label>
+											<label class="control-label" for="日期" id="datetimepicker">日期</label>
 											<div class="controls">
-												<input type="text" class="input-medium" id="firstname" value="Rod" />
+												<input type="text" class="input-medium datetimepicker" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
-										
+									
 										<div class="control-group">											
-											<label class="control-label" for="firstname">星期</label>
+											<label class="control-label" for="firstname">时间</label>
 											<div class="controls">
-												<input type="text" class="input-medium" id="firstname" value="Rod" />
+												<input type="text" class="input-medium" id="firstname" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
-										
 										
 										<div class="control-group">											
 											<label class="control-label" for="lastname">方向</label>
 											<div class="controls">
-											<input type="radio" name="trend" value="1"/>涨&nbsp;&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="trend" value="1" checked="checked"/>涨&nbsp;&nbsp;&nbsp;&nbsp;
 											<input type="radio" name="trend" value="2"/>跌											
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
@@ -127,30 +123,44 @@
 										<div class="control-group">											
 											<label class="control-label" for="email">点位</label>
 											<div class="controls">
-												<input type="text" class="input-large" id="email" value="rod.howard@example.com" />
+												<input type="text" class="input-large" id="email" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
-										
-										
-										<div class="control-group">											
-											<label class="control-label" for="password1">幅度</label>
-											<div class="controls">
-												<input type="password" class="input-medium" id="password1" value="password" />
-											</div> <!-- /controls -->				
-										</div> <!-- /control-group -->
-										
+													
 										
 										<div class="control-group">											
 											<label class="control-label" for="password2">备注</label>
 											<div class="controls">
-												<input type="password" class="input-medium" id="password2" value="password" />
+												<select class="form-control">
+												  <option>1</option>
+												  <option>2</option>
+												  <option>3</option>
+												  <option>4</option>
+												  <option>5</option>
+												</select>
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										<div class="control-group">											
+											<label class="control-label" for="password2">开盘</label>
+											<div class="controls">
+												<input type="radio" name="start" value="1" />是&nbsp;&nbsp;&nbsp;&nbsp;
+												<input type="radio" name="start" value="2" checked="checked"/>否	
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										<div class="control-group">											
+											<label class="control-label" for="password2">结算</label>
+											<div class="controls">
+												<input type="radio" name="end" value="1" />是&nbsp;&nbsp;&nbsp;&nbsp;
+												<input type="radio" name="end" value="2" checked="checked"/>否	
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
 										<div class="control-group">											
 											<label class="control-label" for="password2">事件</label>
 											<div class="controls">
-												<input type="password" class="input-medium" id="password2" value="password" />
+												<input type="password" class="input-medium" id="password2" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 											
@@ -216,9 +226,15 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="{-$media-}/js/jquery-1.7.2.min.js"></script>
-
-
 <script src="{-$media-}/js/bootstrap.js"></script>
+<script src="{-$media-}/js/bootstrap-datetimepicker.js"></script>
+<script>
+$(document).ready(function(){
+	$("input").focus(function(){
+		  $('#datetimepicker').daterangepicker();
+	});
+ }); 
+</script>
 
   </body>
 </html>

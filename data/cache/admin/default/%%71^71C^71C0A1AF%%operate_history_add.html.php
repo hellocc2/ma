@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2015-08-08 15:35:55
+<?php /* Smarty version 2.6.18, created on 2015-08-09 12:11:00
          compiled from operate_history_add.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headnav', 'operate_history_add.html', 35, false),array('function', 'html_account', 'operate_history_add.html', 52, false),array('function', 'html_siderbar', 'operate_history_add.html', 56, false),array('modifier', 'date_format', 'operate_history_add.html', 86, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headnav', 'operate_history_add.html', 35, false),array('function', 'html_account', 'operate_history_add.html', 52, false),array('function', 'html_siderbar', 'operate_history_add.html', 56, false),array('modifier', 'date_format', 'operate_history_add.html', 83, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,7 +25,8 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headna
     <link href="<?php echo $this->_tpl_vars['media']; ?>
 /css/adminia-responsive.css" rel="stylesheet" /> 
     
-    
+    <link href="<?php echo $this->_tpl_vars['media']; ?>
+/css/timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />  
     <link href="<?php echo $this->_tpl_vars['media']; ?>
 /css/pages/plans.css" rel="stylesheet" /> 
 
@@ -71,10 +72,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headna
 				
 				<hr />
 				
-				<div class="sidebar-extra">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-				</div> <!-- .sidebar-extra -->
-				
+								
 				<br />
 		
 			</div> <!-- /span3 -->
@@ -114,25 +112,24 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headna
 									<fieldset>
 										
 										<div class="control-group">											
-											<label class="control-label" for="firstname">日期</label>
+											<label class="control-label" for="日期" id="datetimepicker">日期</label>
 											<div class="controls">
-												<input type="text" class="input-medium" id="firstname" value="Rod" />
+												<input type="text" class="input-medium datetimepicker" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
-										
+									
 										<div class="control-group">											
-											<label class="control-label" for="firstname">星期</label>
+											<label class="control-label" for="firstname">时间</label>
 											<div class="controls">
-												<input type="text" class="input-medium" id="firstname" value="Rod" />
+												<input type="text" class="input-medium" id="firstname" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
-										
 										
 										<div class="control-group">											
 											<label class="control-label" for="lastname">方向</label>
 											<div class="controls">
-											<input type="radio" name="trend" value="1"/>涨&nbsp;&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="trend" value="1" checked="checked"/>涨&nbsp;&nbsp;&nbsp;&nbsp;
 											<input type="radio" name="trend" value="2"/>跌											
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
@@ -141,30 +138,44 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headna
 										<div class="control-group">											
 											<label class="control-label" for="email">点位</label>
 											<div class="controls">
-												<input type="text" class="input-large" id="email" value="rod.howard@example.com" />
+												<input type="text" class="input-large" id="email" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
-										
-										
-										<div class="control-group">											
-											<label class="control-label" for="password1">幅度</label>
-											<div class="controls">
-												<input type="password" class="input-medium" id="password1" value="password" />
-											</div> <!-- /controls -->				
-										</div> <!-- /control-group -->
-										
+													
 										
 										<div class="control-group">											
 											<label class="control-label" for="password2">备注</label>
 											<div class="controls">
-												<input type="password" class="input-medium" id="password2" value="password" />
+												<select class="form-control">
+												  <option>1</option>
+												  <option>2</option>
+												  <option>3</option>
+												  <option>4</option>
+												  <option>5</option>
+												</select>
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										<div class="control-group">											
+											<label class="control-label" for="password2">开盘</label>
+											<div class="controls">
+												<input type="radio" name="start" value="1" />是&nbsp;&nbsp;&nbsp;&nbsp;
+												<input type="radio" name="start" value="2" checked="checked"/>否	
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										<div class="control-group">											
+											<label class="control-label" for="password2">结算</label>
+											<div class="controls">
+												<input type="radio" name="end" value="1" />是&nbsp;&nbsp;&nbsp;&nbsp;
+												<input type="radio" name="end" value="2" checked="checked"/>否	
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
 										<div class="control-group">											
 											<label class="control-label" for="password2">事件</label>
 											<div class="controls">
-												<input type="password" class="input-medium" id="password2" value="password" />
+												<input type="password" class="input-medium" id="password2" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 											
@@ -231,10 +242,17 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headna
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="<?php echo $this->_tpl_vars['media']; ?>
 /js/jquery-1.7.2.min.js"></script>
-
-
 <script src="<?php echo $this->_tpl_vars['media']; ?>
 /js/bootstrap.js"></script>
+<script src="<?php echo $this->_tpl_vars['media']; ?>
+/js/bootstrap-datetimepicker.js"></script>
+<script>
+$(document).ready(function(){
+	$("input").focus(function(){
+		  $('#datetimepicker').daterangepicker();
+	});
+ }); 
+</script>
 
   </body>
 </html>
