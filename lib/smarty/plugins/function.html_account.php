@@ -18,7 +18,7 @@ function smarty_function_html_account($params, &$smarty)
 				
 					<div class="account-details">
 					
-						<span class="account-name">蒋彩</span>
+						<span class="account-name">阳光</span>
 						
 						<span class="account-role">管理员</span>
 						

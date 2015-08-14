@@ -32,7 +32,7 @@ function smarty_function_html_headnav($params, &$smarty)
 					<li class="dropdown">
 						
 						<a data-toggle="dropdown" class="dropdown-toggle " href="#">
-							蒋彩 <b class="caret"></b>							
+							阳光 <b class="caret"></b>							
 						</a>
 						
 						<ul class="dropdown-menu">

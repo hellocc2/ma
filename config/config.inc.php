@@ -40,7 +40,7 @@ if (!defined('DATA_CACHE_ROOT_PATH')) define('DATA_CACHE_ROOT_PATH', ROOT_PATH .
  * 调试模式开关.调试模式下会输出所有错误信息
  * @var boolean
  */
-define('DEBUG_MODE',1);
+define('DEBUG_MODE',0);
 /**
  * 调试级别.
  * @var INT 0,输出所有调试信息.<br /> 

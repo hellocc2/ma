@@ -17,11 +17,10 @@ use Helper\RequestUtil as R;
  */
 class Login extends \Lib\common\Application {
 	public function __construct() {
-		$client=\Helper\CheckLogin::sso();
 		$tpl = \Lib\common\Template::getSmarty ();
 		$params_all = R::getParams ();
 		
-		if (!empty ( $client['uid'] )) {
+		/*if (!empty ( $client['uid'] )) {
 
 			$db = \Lib\common\Db::get_db ( 'milanoo' );
 
@@ -45,8 +44,8 @@ class Login extends \Lib\common\Application {
 				$tpl->display ( 'member_login.htm' );
 				exit ();
 			}
-		}
-		$tpl->display ( 'member_login.htm' );
+		}*/
+		$tpl->display ( 'member_login.html' );
 	}
 }
 
