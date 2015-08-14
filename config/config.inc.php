@@ -21,7 +21,7 @@ if (!defined('CDN_ROOT'))
 	}
 }
 if (!defined('MD5_pass')) define('MD5_pass', 'milanoo_');
-if (!defined('SESSION_PREFIX')) define('SESSION_PREFIX', md5('milanoo_session_'));//session加密字符
+if (!defined('SESSION_PREFIX')) define('SESSION_PREFIX', md5('sunny_session_'));//session加密字符
 if (!defined('FileUp')) define('FileUp', ROOT_PATH . 'upload');//上传文件目录
 if (!defined('CDN_IMAGE_URL')) define('CDN_IMAGE_URL', CDN_ROOT);//新图片地址image
 if (!defined('CDN_JAVASCRIPT_URL')) define('CDN_JAVASCRIPT_URL', ROOT_URL.'ued/javascript/');//新JS文件地址

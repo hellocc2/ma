@@ -16,7 +16,7 @@
     <link href="{-$media-}/css/adminia.css" rel="stylesheet" /> 
     <link href="{-$media-}/css/adminia-responsive.css" rel="stylesheet" /> 
     
-    <link href="{-$media-}/css/timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />  
+    <link href="{-$media-}/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />  
     <link href="{-$media-}/css/pages/plans.css" rel="stylesheet" /> 
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -72,7 +72,15 @@
 					添加行情				
 				</h1>
 				
-				
+				<div class="input-group date form_date col-md-5" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+				  <input class="form-control" size="16" type="text" value="" readonly>
+				  <span class="input-group-addon">
+				  <span class="glyphicon glyphicon-remove"></span>
+				  </span>
+				 <span class="input-group-addon">
+				 <span class="glyphicon glyphicon-calendar"></span></span>
+				</div>
+
 				<div class="row">
 					
 					<div class="span9">
@@ -97,9 +105,9 @@
 									<fieldset>
 										
 										<div class="control-group">											
-											<label class="control-label" for="日期" id="datetimepicker">日期</label>
-											<div class="controls">
-												<input type="text" class="input-medium datetimepicker" value="" />
+											<label class="control-label" for="日期" >日期</label>
+											<div class="controls" id="datetimepicker">
+												<input type="text" class="input-medium" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
@@ -228,11 +236,21 @@
 <script src="{-$media-}/js/jquery-1.7.2.min.js"></script>
 <script src="{-$media-}/js/bootstrap.js"></script>
 <script src="{-$media-}/js/bootstrap-datetimepicker.js"></script>
+<script src="{-$media-}/js/bootstrap-datetimepicker.zh-CN.js"</script>
 <script>
 $(document).ready(function(){
-	$("input").focus(function(){
-		  $('#datetimepicker').daterangepicker();
-	});
+	$('#datetimepicker').daterangepicker({
+		language: 'zh-CN',/*加载日历语言包，可自定义*/
+		  weekStart: 1,
+		  todayBtn: 1,
+		  autoclose: 1,
+		  todayHighlight: 1,
+		  startView: 2,
+		  minView: 2,
+		  forceParse: 0
+    });
+
+	
  }); 
 </script>
 
