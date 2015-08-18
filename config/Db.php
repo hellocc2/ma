@@ -2,7 +2,7 @@
 namespace config;
 use PDO;
 class Db{
-	public static $default=array('driver'=>'mysql',
+	public static $default=array('driver'=>'mysqli',
 						  'host'=>'103.224.22.13',
 						  'port'=>3306,
 						  'dbname'=>'a56rmgri_money',

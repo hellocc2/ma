@@ -14,7 +14,7 @@ class Summary extends \Lib\common\Application {
 		$params_all = R::getParams ();
 		
 		
-		$tpl->display ( 'index.html' );
+		$tpl->display ( 'operate_summary.html' );
 	}
 }
 

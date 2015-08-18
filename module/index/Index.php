@@ -10,7 +10,7 @@ class Index extends \Lib\common\Application {
 		$action=R::getParams ('action');
 		
 		$tpl->assign('action',$action);
-        $tpl->display ( 'index.html' );
+        $tpl->display ('index.html');
         
 
 	}

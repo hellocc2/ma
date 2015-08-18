@@ -31,11 +31,18 @@ function smarty_function_html_siderbar($params, &$smarty)
 			$Account='class="active"';
 		break;
 		default:
-			$Summary='class="active"';		
+			$News='class="active"';		
 	}
 
     $html='';
 	$html='<ul id="main-nav" class="nav nav-tabs nav-stacked">
+	
+					<li '.$News.'>
+						<a href="index.php?module=index&action=Index">
+							<i class="icon-home"></i>
+							重大新闻 		
+						</a>
+					</li>
 					
 					<li '.$Summary.'>
 						<a href="index.php?module=operate&action=Summary">

@@ -19,13 +19,12 @@ class Login extends \Lib\common\Application {
 			$password=md5($password);
 
 			if ($username&&$password) {
- 				//$sql = "SELECT * FROM `rmb_money_member` WHERE member_name='".$username."' AND member_password='".$password."'";
-				$sql="SELECT * FROM mecoo_bar_label";
- 				$row = $db->getRow ($sql);
-				echo '<pre/>';var_dump($row);exit;
+ 				$sql = "SELECT * FROM `rmb_money_member` WHERE member_name='".$username."' AND member_password='".$password."'";
+				$row = $db->getRow($sql);
+				//echo '<pre/>';var_dump($row);exit;
  				if (empty($row)){
  					$tpl->assign ( 'error', '登录失败，请重新登陆' );
- 					$tpl->display ( 'member_login.htm' );
+ 					$tpl->display ( 'member_login.html' );
 					exit ();
  				}
 				

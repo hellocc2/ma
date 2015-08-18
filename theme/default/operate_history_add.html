@@ -72,15 +72,6 @@
 					添加行情				
 				</h1>
 				
-				<div class="input-group date form_date col-md-5" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-				  <input class="form-control" size="16" type="text" value="" readonly>
-				  <span class="input-group-addon">
-				  <span class="glyphicon glyphicon-remove"></span>
-				  </span>
-				 <span class="input-group-addon">
-				 <span class="glyphicon glyphicon-calendar"></span></span>
-				</div>
-
 				<div class="row">
 					
 					<div class="span9">
@@ -106,16 +97,16 @@
 										
 										<div class="control-group">											
 											<label class="control-label" for="日期" >日期</label>
-											<div class="controls" id="datetimepicker">
-												<input type="text" class="input-medium" value="" />
+											<div class="controls" id="actdatepicker">
+												<input type="text" class="input-medium" name="hdate" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
 									
-										<div class="control-group">											
-											<label class="control-label" for="firstname">时间</label>
-											<div class="controls">
-												<input type="text" class="input-medium" id="firstname" value="" />
+										<div class="control-group">							
+										<label class="control-label" for="firstname">时间</label>
+											<div class="controls"  id="timepicker">
+												<input type="text" class="input-medium" id="firstname" name="htime" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
@@ -237,19 +228,33 @@
 <script src="{-$media-}/js/bootstrap.js"></script>
 <script src="{-$media-}/js/bootstrap-datetimepicker.js"></script>
 <script src="{-$media-}/js/bootstrap-datetimepicker.zh-CN.js"</script>
+<script src="{-$media-}/js/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?v=1.0.0"</script>
 <script>
 $(document).ready(function(){
-	$('#datetimepicker').daterangepicker({
-		language: 'zh-CN',/*加载日历语言包，可自定义*/
-		  weekStart: 1,
-		  todayBtn: 1,
-		  autoclose: 1,
-		  todayHighlight: 1,
-		  startView: 2,
-		  minView: 2,
-		  forceParse: 0
-    });
+	// 时间控件初始化
+	var datepicker = $('#actdatepicker')
+	datepicker.children('input').datetimepicker({
+	   language:'zh-CN',
+	   format: 'yyyy-mm-dd',
+	   pickerPosition: "bottom-right",
+		weekStart: 1,
+		todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+	});
 
+	// 时间控件初始化
+	var timepicker = $('#timepicker')
+	timepicker.children('input').datetimepicker({
+	   language:'zh-CN',
+	   format: 'hh:ii',
+	   pickerPosition: "bottom-right",
+		format: 'hh:ii',
+         startView:1
+	});
 	
  }); 
 </script>
