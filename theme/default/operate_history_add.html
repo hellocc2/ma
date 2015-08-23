@@ -92,7 +92,8 @@
 						
 							<div class="tab-content">
 								<div class="tab-pane active" id="1">
-								<form id="edit-profile" class="form-horizontal" />
+								<form id="edit-profile" class="form-horizontal" method="post" action="index.php?module=operate&action=history&act=add"/>
+									<input type="hidden" name="act" value="addpost"/>
 									<fieldset>
 										
 										<div class="control-group">											
@@ -120,28 +121,29 @@
 										
 										
 										<div class="control-group">											
-											<label class="control-label" for="email">点位</label>
+											<label class="control-label" for="point">点位</label>
 											<div class="controls">
-												<input type="text" class="input-large" id="email" value="" />
-											</div> <!-- /controls -->				
+												<input type="text" class="input-large" id="point" name="point" value="" />
+											</div> <!-- /controls -->	
+
+											
 										</div> <!-- /control-group -->
 													
 										
 										<div class="control-group">											
-											<label class="control-label" for="password2">备注</label>
+											<label class="control-label" for="password2" name="note">备注</label>
 											<div class="controls">
 												<select class="form-control">
-												  <option>1</option>
-												  <option>2</option>
-												  <option>3</option>
-												  <option>4</option>
-												  <option>5</option>
+												  <option value="1">最高点</option>
+												  <option value="2">最低点</option>
+												  <option value="3">次高点</option>
+												  <option value="4">次低点</option>
 												</select>
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
 										<div class="control-group">											
-											<label class="control-label" for="password2">开盘</label>
+											<label class="control-label" for="password2" name="open">开盘</label>
 											<div class="controls">
 												<input type="radio" name="start" value="1" />是&nbsp;&nbsp;&nbsp;&nbsp;
 												<input type="radio" name="start" value="2" checked="checked"/>否	
@@ -149,7 +151,7 @@
 										</div> <!-- /control-group -->
 										
 										<div class="control-group">											
-											<label class="control-label" for="password2">结算</label>
+											<label class="control-label" for="password2" name="close">结算</label>
 											<div class="controls">
 												<input type="radio" name="end" value="1" />是&nbsp;&nbsp;&nbsp;&nbsp;
 												<input type="radio" name="end" value="2" checked="checked"/>否	
@@ -157,7 +159,7 @@
 										</div> <!-- /control-group -->
 										
 										<div class="control-group">											
-											<label class="control-label" for="password2">事件</label>
+											<label class="control-label" for="password2" name="thing">事件</label>
 											<div class="controls">
 												<input type="password" class="input-medium" id="password2" value="" />
 											</div> <!-- /controls -->				
