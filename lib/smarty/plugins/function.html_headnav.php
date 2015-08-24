@@ -18,7 +18,7 @@ function smarty_function_html_headnav($params, &$smarty)
 				<span class="icon-bar"></span> 				
 			</a>
 			
-			<a class="brand" href="./">行情统计后台</a>
+			<a class="brand" href="./">统计后台</a>
 			
 			<div class="nav-collapse">
 			
