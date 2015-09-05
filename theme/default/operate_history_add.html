@@ -169,7 +169,7 @@
 										
 											
 										<div class="form-actions">
-											<button type="submit" class="btn btn-primary">保存</button> 
+											<button type="button" class="btn btn-primary savebtn">保存</button> 
 											<button class="btn">取消</button>
 										</div> <!-- /form-actions -->
 									</fieldset>
@@ -229,8 +229,9 @@
 <script src="{-$media-}/js/jquery-1.7.2.min.js"></script>
 <script src="{-$media-}/js/bootstrap.js"></script>
 <script src="{-$media-}/js/bootstrap-datetimepicker.js"></script>
-<script src="{-$media-}/js/bootstrap-datetimepicker.zh-CN.js"</script>
-<script src="{-$media-}/js/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?v=1.0.0"</script>
+<script src="{-$media-}/js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="{-$media-}/js/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?v=1.0.0"></script>
+<script src="{-$media-}/js/assets/global/plugins/jquery-form/jquery-form.min.js"></script>
 <script>
 $(document).ready(function(){
 	// 时间控件初始化
@@ -258,7 +259,52 @@ $(document).ready(function(){
          startView:1
 	});
 	
+	
+	 // 编辑保存
+        var checkoutcasereplayForm = $('#edit-profile').validate({
+            // Rules for form validation
+            rules: {
+                point: "required"
+            },
+            // Messages for form validation
+            messages: {
+                point: "请输入点位"
+            }, // Ajax form submition
+            submitHandler: function(form) {
+                $(form).ajaxSubmit({
+                    url: $(form).attr("action"),
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(res) {
+                        $("#edit-profile").addClass('submited');
+                        if (res.code == 200) {
+                            toastr['success']("保存成功", "操作结果");
+                        } else {
+                            toastr['error'](res.msg, "操作结果");
+                        }
+                    }
+                });
+            },
+
+            // Do not change code below
+            errorPlacement: function(error, element) {
+                error.insertAfter(element.parent());
+            }
+        });
+
+        $("#edit-profile").on('click', '.savebtn', function() {
+		alert(22);
+            if ($('#edit-profile').valid()) {
+                $('#edit-profile').submit();
+            }
+        });
+	
  }); 
+ 
+ 
+ 
+ 
+       
 </script>
 
   </body>

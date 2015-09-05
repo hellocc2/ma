@@ -12,7 +12,7 @@ class History extends \Lib\common\Application {
 		//$client=\Helper\CheckLogin::sso();
 		$tpl = \Lib\common\Template::getSmarty ();
 		$act = R::getParams ('act');
-		
+		$result=array('code'=>500,'msg'=>'操作失败');
 		$history=new \Model\History();
 				
 		switch($act){
@@ -45,12 +45,11 @@ class History extends \Lib\common\Application {
 				//$data['memberId']=$memberId;
 				$data['gmt_create']=$gmt_create;				
 				
-				
 				$res=$history->addHistory($data);
 				if($res){
-					\Helper\JS::alertForward('提交成功');
+					$result=array('code'=>200,'msg'=>'操作成功');
 				}
-				exit;		
+				echo json_encode($result);	exit;		
 			break;
 			default:
 				$tpl->display ( 'operate_history.html' );
