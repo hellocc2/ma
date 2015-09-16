@@ -9,8 +9,7 @@
     
     <link href="{-$media-}/css/bootstrap.min.css" rel="stylesheet" />
     <link href="{-$media-}/css/bootstrap-responsive.min.css" rel="stylesheet" />
-    
-    
+    <link href="{-$media-}/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" />
     <link href="{-$media-}/css/font-awesome.css" rel="stylesheet" />
     
     <link href="{-$media-}/css/adminia.css" rel="stylesheet" /> 
@@ -232,6 +231,7 @@
 <script src="{-$media-}/js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="{-$media-}/js/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?v=1.0.0"></script>
 <script src="{-$media-}/js/assets/global/plugins/jquery-form/jquery-form.min.js"></script>
+<script src="{-$media-}/global/plugins/bootstrap-toastr/toastr.min.js"></script>
 <script>
 $(document).ready(function(){
 	// 时间控件初始化
@@ -293,8 +293,7 @@ $(document).ready(function(){
         });
 
         $("#edit-profile").on('click', '.savebtn', function() {
-		alert(22);
-            if ($('#edit-profile').valid()) {
+	        if ($('#edit-profile').valid()) {
                 $('#edit-profile').submit();
             }
         });
