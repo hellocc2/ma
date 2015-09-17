@@ -29,6 +29,45 @@ class History{
 		return $output;
 	}
 	
+	/**
+	*查询历史行情
+	*/
+	public function selectHistory($data=array()){
+		$output=false;
+	
+		$sql = "SELECT   h.his_date,h.his_point
+				FROM a56rmgri_money.rmb_history AS h  
+				WHERE h.his_note=1";
+				
+		$query	= $this->db->Execute($sql);
+		$pageSize=12;
+		$page=1;
+		if(!empty($data['pageSize'])){
+			$pageSize=$data['pageSize'];
+		}
+		if(!empty($data['page'])){
+			$page=$data['page'];
+		}		
+		$last_num= $pageSize* ($page-1);
+		$num	= $query->MaxRecordCount($query);
+		
+		if($last_num>=$num) $last_num=(ceil( $num / $pageSize )-1) * $pageSize;
+		$rs= $this->db->SelectLimit($sql,$pageSize,$last_num);
+		$row = array ();
+		$hitory_all = array ();
+		if ($rs->RecordCount ()){
+			$roles=array();
+			while ( ! $rs->EOF ) {
+				$row = $rs -> fields;
+	            $hitory_all['his_date'][]=date('d',strtotime($row['his_date']));
+				$hitory_all['his_point_high'][]=$row['his_point'];
+				$rs->MoveNext ();
+			}
+		}
+		$hitory_all['totalCount']=$num;
+		//echo '<pre/>';print_r($hitory_all);exit;
+		return $hitory_all;
+	}
 	
 	
 	
