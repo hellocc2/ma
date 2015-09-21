@@ -34,10 +34,15 @@ class History{
 	*/
 	public function selectHistory($data=array()){
 		$output=false;
-	
+		$where[]="WHERE 1 = 1";
+		if(!empty($data['hit_note'])){
+				$where[]="h.his_note = {$data['hit_note']}";
+		}
+		$where=implode(' and ', $where);
+		
 		$sql = "SELECT   h.his_date,h.his_point
 				FROM a56rmgri_money.rmb_history AS h  
-				WHERE h.his_note=1";
+				{$where}";
 				
 		$query	= $this->db->Execute($sql);
 		$pageSize=12;
