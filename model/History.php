@@ -10,6 +10,51 @@ class History{
 	}
 	//=======================获取数据start=====================
 	/**
+	*批量上传数据
+	*/
+	function  multi_upload($values){
+		//testshow($keys);
+		//testshow($values,1);	
+		$db_flag=1;
+		$values=eval('return '.iconv('GBK', 'UTF-8', var_export($values,true)).';');		
+		$num=$upload_result['fail']=$upload_result['succeed']=0;
+		$this->db->BeginTrans();
+			
+		foreach($values as $data){
+			$num++;
+			$keys=array_keys($data);
+			
+			//组装sql
+			$sql="insert  into `".TABLE_PREFIX."rmb` (`";
+			$sql.=implode('`,`',$keys);
+			$sql.='`) values';
+			$temp=implode("','",$data);
+			$value="('".$temp."')";
+			$sql.=$value;
+		
+			$result=$this->db->Execute($sql);
+			if(!$result){
+				$upload_result['fail']++;
+				$upload_result['fail_serial_num'][]=$num;
+				$db_flag=0;
+			}
+			$insert_id=$this->db->Insert_ID();
+			if(!empty($insert_id)){
+				$log['id']=$insert_id;
+				$log['message']="<span style='color:#006699'>[系统]</span>添加成功";
+				//$this->addLog($log);
+				$upload_result['succeed']++;
+			}					
+		}
+		if($db_flag==1){
+			$this->db->CommitTrans();
+		}else{
+			$this->db->RollbackTrans();
+		}
+		return 	$upload_result;
+	}
+	
+	/**
 	 * 添加历史行情
 	 */
 	public function addHistory($data=array()){

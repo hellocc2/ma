@@ -163,14 +163,23 @@
 												<input type="password" class="input-medium" id="password2" value="" />
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
-											
-											<br />
 										
-											
 										<div class="form-actions">
 											<button type="button" class="btn btn-primary savebtn">保存</button> 
 											<button class="btn">取消</button>
 										</div> <!-- /form-actions -->
+										<br />
+										<form method="post" action="" target="main" name="form_multi_upload" enctype="multipart/form-data" id="form_multi_upload">
+										<input type="hidden" name="act" value="multi_upload">										
+										<div class="control-group">											
+											<label class="control-label" for="password2" name="thing">批量上传</label>
+											<div class="controls">
+												<input type="file" name="filename" size='30' id="filename">
+												<input type="button" class="btn btn-primary savebtn" value="批量上传">
+											</div> <!-- /controls -->				
+										</div> 
+										</form>	
+										
 									</fieldset>
 								</form>
 								</div>

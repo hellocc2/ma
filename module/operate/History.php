@@ -1,7 +1,5 @@
 <?php
-
 namespace Module\operate;
-
 use Helper\RequestUtil as R;
 
 /**
@@ -51,6 +49,39 @@ class History extends \Lib\common\Application {
 				}
 				echo json_encode($result);	exit;		
 			break;
+			case 'multi_upload':
+				//testglob(1);
+				if(strrchr($_FILES['filename']['name'],'.csv')!='.csv'){
+					\Helper\Js::alertForward('文件格式错误，只能是csv格式的文件');
+				}
+				ini_set("max_execution_time", "0");
+				set_time_limit(0);
+				ini_set("memory_limit",'200M');
+				
+				$type_sub 		= R::getParams('multi_type_sub');
+				$handle=fopen($_FILES['filename']['tmp_name'],'r');
+				$keys=fgetcsv($handle,1000,',');
+				
+				while($data=fgetcsv($handle,1000,',')){
+					$value=array_combine($keys, $data);
+					$value['STATUS']='UNFINISHED';
+					$value['TYPE']=$type;
+					$value['TYPE_SUB']=$type_sub;
+					$value['USER_ID']=$_SESSION[SESSION_PREFIX . "uid"];	
+					if($type_sub!='RMATHD'){
+						unset($value['trackingNumber']);
+					}				
+					$values[]=$value;
+				}
+				$upload_result=$history->multi_upload($values);
+				fclose($handle);
+				if($upload_result['fail']==0){
+					echo ' 批量上传成功 '.$upload_result['succeed'].' 条';
+				}else{
+					$fail_serial_num=implode(',', $upload_result['fail_serial_num']);
+					echo ' 批量上传失败,错误的数据为:第 '.$upload_result['succeed'].' 条';
+				}				
+				break;
 			default:
 				$tpl->display ( 'operate_history.html' );
 			
