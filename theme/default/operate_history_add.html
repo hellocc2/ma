@@ -91,8 +91,8 @@
 						
 							<div class="tab-content">
 								<div class="tab-pane active" id="1">
-								<form id="edit-profile" class="form-horizontal" method="post" action="index.php?module=operate&action=history&act=add"/>
-									<input type="hidden" name="act" value="addpost"/>
+								<form id="edit-profile" class="form-horizontal" method="post" action=""/>
+									<input type="hidden" name="action" value="addpost"/>
 									<fieldset>
 										
 										<div class="control-group">											
@@ -169,8 +169,8 @@
 											<button class="btn">取消</button>
 										</div> <!-- /form-actions -->
 										<br />
-										<form method="post" action="" target="main" name="form_multi_upload" enctype="multipart/form-data" id="form_multi_upload">
-										<input type="hidden" name="act" value="multi_upload">										
+										<form id="multi" method="post" action="" target="main" name="form_multi_upload" enctype="multipart/form-data" id="form_multi_upload">
+										<input type="hidden" name="action" value="multi_upload">										
 										<div class="control-group">											
 											<label class="control-label" for="password2" name="thing">批量上传</label>
 											<div class="controls">
@@ -304,6 +304,12 @@ $(document).ready(function(){
         $("#edit-profile").on('click', '.savebtn', function() {
 	        if ($('#edit-profile').valid()) {
                 $('#edit-profile').submit();
+            }
+        });
+		
+		$("#multi").on('click', '.savebtn', function() {
+	        if ($('#multi').valid()) {
+                $('#multi').submit();
             }
         });
 	
