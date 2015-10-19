@@ -18,6 +18,7 @@ class History{
 		$db_flag=1;
 		$values=eval('return '.iconv('GBK', 'UTF-8', var_export($values,true)).';');		
 		$num=$upload_result['fail']=$upload_result['succeed']=0;
+		//$this->db->debug=1;
 		$this->db->BeginTrans();
 			
 		foreach($values as $data){
@@ -25,7 +26,7 @@ class History{
 			$keys=array_keys($data);
 			
 			//组装sql
-			$sql="insert  into `".TABLE_PREFIX."rmb` (`";
+			$sql="insert  into `rmb_history` (`";
 			$sql.=implode('`,`',$keys);
 			$sql.='`) values';
 			$temp=implode("','",$data);
@@ -80,15 +81,15 @@ class History{
 	public function selectHistory($data=array()){
 		$output=false;
 		$where[]="WHERE 1 = 1";
-		if(!empty($data['hit_note'])){
-				$where[]="h.his_note = {$data['hit_note']}";
+		if(!empty($data['his_note'])){
+				$where[]="h.his_note = {$data['his_note']}";
 		}
 		$where=implode(' and ', $where);
 		
 		$sql = "SELECT   h.his_date,h.his_point
 				FROM a56rmgri_money.rmb_history AS h  
 				{$where}";
-				
+		//echo $sql;		
 		$query	= $this->db->Execute($sql);
 		$pageSize=12;
 		$page=1;
@@ -110,7 +111,7 @@ class History{
 			while ( ! $rs->EOF ) {
 				$row = $rs -> fields;
 	            $hitory_all['his_date'][]=date('d',strtotime($row['his_date']));
-				$hitory_all['his_point_high'][]=$row['his_point'];
+				$hitory_all['his_point'][]=$row['his_point'];
 				$rs->MoveNext ();
 			}
 		}

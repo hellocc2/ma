@@ -9,9 +9,9 @@ class Add extends \Lib\common\Application {
 	public function __construct() {
 		//$client=\Helper\CheckLogin::sso();
 		$tpl = \Lib\common\Template::getSmarty ();
+		$tpl->assign('time',date('Y-m-d',time()));
 		
-		if($_POST){
-			echo '<pre/>';print_r($_POST);echo 222;exit;
+		if($_POST||$_FILES){
 			$act = R::getParams ('act');
 			$history=new \Model\History();
 			switch($act){
@@ -60,22 +60,17 @@ class Add extends \Lib\common\Application {
 					
 					while($data=fgetcsv($handle,1000,',')){
 						$value=array_combine($keys, $data);
-						$value['STATUS']='UNFINISHED';
-						$value['TYPE']=$type;
-						$value['TYPE_SUB']=$type_sub;
-						$value['USER_ID']=$_SESSION[SESSION_PREFIX . "uid"];	
-						if($type_sub!='RMATHD'){
-							unset($value['trackingNumber']);
-						}				
 						$values[]=$value;
 					}
 					$upload_result=$history->multi_upload($values);
 					fclose($handle);
 					if($upload_result['fail']==0){
-						echo ' 批量上传成功 '.$upload_result['succeed'].' 条';
+						$msg=' 批量上传成功 '.$upload_result['succeed'].' 条';
+						\Helper\Js::alertForward($msg);
 					}else{
 						$fail_serial_num=implode(',', $upload_result['fail_serial_num']);
-						echo ' 批量上传失败,错误的数据为:第 '.$upload_result['succeed'].' 条';
+						$msg=' 批量上传失败,错误的数据为:第 '.$upload_result['succeed'].' 条';
+						\Helper\Js::alertForward($msg);
 					}
 					exit;
 				break;
