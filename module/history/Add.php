@@ -10,7 +10,7 @@ class Add extends \Lib\common\Application {
 		//$client=\Helper\CheckLogin::sso();
 		$tpl = \Lib\common\Template::getSmarty ();
 		$tpl->assign('time',date('Y-m-d',time()));
-		
+	
 		if($_POST||$_FILES){
 			$act = R::getParams ('act');
 			$history=new \Model\History();
@@ -60,6 +60,8 @@ class Add extends \Lib\common\Application {
 					
 					while($data=fgetcsv($handle,1000,',')){
 						$value=array_combine($keys, $data);
+						$value['gmt_create']=time();
+						//echo '<pre/>';print_r($value);exit;
 						$values[]=$value;
 					}
 					$upload_result=$history->multi_upload($values);

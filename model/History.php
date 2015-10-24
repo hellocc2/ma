@@ -19,6 +19,8 @@ class History{
 		$values=eval('return '.iconv('GBK', 'UTF-8', var_export($values,true)).';');		
 		$num=$upload_result['fail']=$upload_result['succeed']=0;
 		//$this->db->debug=1;
+		//echo '<pre/>';print_r($values);exit;
+		
 		$this->db->BeginTrans();
 			
 		foreach($values as $data){
@@ -26,7 +28,7 @@ class History{
 			$keys=array_keys($data);
 			
 			//组装sql
-			$sql="insert  into `rmb_history` (`";
+			$sql="insert  into `rmb_top` (`";
 			$sql.=implode('`,`',$keys);
 			$sql.='`) values';
 			$temp=implode("','",$data);
@@ -81,17 +83,16 @@ class History{
 	public function selectHistory($data=array()){
 		$output=false;
 		$where[]="WHERE 1 = 1";
-		if(!empty($data['his_note'])){
-				$where[]="h.his_note = {$data['his_note']}";
-		}
+		// if(!empty($data['his_note'])){
+				// $where[]="h.his_note = {$data['his_note']}";
+		// }
 		$where=implode(' and ', $where);
 		
-		$sql = "SELECT   h.his_date,h.his_point
-				FROM a56rmgri_money.rmb_history AS h  
-				{$where}";
-		//echo $sql;		
+		$sql = "SELECT  *
+				FROM rmb_top AS h {$where} ORDER BY MONTH(DATE),DAY(DATE) ASC";
+		echo $sql;		
 		$query	= $this->db->Execute($sql);
-		$pageSize=12;
+		$pageSize=1000;
 		$page=1;
 		if(!empty($data['pageSize'])){
 			$pageSize=$data['pageSize'];
@@ -110,14 +111,12 @@ class History{
 			$roles=array();
 			while ( ! $rs->EOF ) {
 				$row = $rs -> fields;
-	            $hitory_all['his_date'][]=date('d',strtotime($row['his_date']));
-				$hitory_all['his_point'][]=$row['his_point'];
+				//$history['date'][]=date('d',strtotime($row['date']));
+				$history[]=$row;
 				$rs->MoveNext ();
 			}
 		}
-		$hitory_all['totalCount']=$num;
-		//echo '<pre/>';print_r($hitory_all);exit;
-		return $hitory_all;
+		return $history;
 	}
 	
 	
