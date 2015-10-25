@@ -28,7 +28,7 @@ class History{
 			$keys=array_keys($data);
 			
 			//组装sql
-			$sql="insert  into `rmb_top` (`";
+			$sql="insert  into `rmb_history_top` (`";
 			$sql.=implode('`,`',$keys);
 			$sql.='`) values';
 			$temp=implode("','",$data);
@@ -83,16 +83,20 @@ class History{
 	public function selectHistory($data=array()){
 		$output=false;
 		$where[]="WHERE 1 = 1";
-		// if(!empty($data['his_note'])){
-				// $where[]="h.his_note = {$data['his_note']}";
-		// }
+		 if(!empty($data['startdate'])){
+				 $where[]="h.`date` >= '{$data['startdate']}'";
+		 }
+		 
+		  if(!empty($data['endate'])){
+				 $where[]="h.`date` <= '{$data['endate']}'";
+		 }
 		$where=implode(' and ', $where);
 		
 		$sql = "SELECT  *
-				FROM rmb_top AS h {$where} ORDER BY MONTH(DATE),DAY(DATE) ASC";
-		echo $sql;		
+				FROM rmb_history_top AS h {$where} ORDER BY MONTH(DATE),DAY(DATE) ASC";
+		//echo $sql;exit;		
 		$query	= $this->db->Execute($sql);
-		$pageSize=1000;
+		$pageSize=100;
 		$page=1;
 		if(!empty($data['pageSize'])){
 			$pageSize=$data['pageSize'];
@@ -111,11 +115,14 @@ class History{
 			$roles=array();
 			while ( ! $rs->EOF ) {
 				$row = $rs -> fields;
-				//$history['date'][]=date('d',strtotime($row['date']));
+				$row['highwidth']=number_format(($row['top_high']-$row['top_low']),2);
+				$row['openwidth']=number_format(($row['top_close']-$row['top_open']),2);
 				$history[]=$row;
+				//echo '<pre/>';print_r($history);exit;
 				$rs->MoveNext ();
 			}
 		}
+		
 		return $history;
 	}
 	
